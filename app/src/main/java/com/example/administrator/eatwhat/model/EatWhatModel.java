@@ -1,18 +1,19 @@
 package com.example.administrator.eatwhat.model;
 
+import io.objectbox.annotation.Entity;
+import io.objectbox.annotation.Id;
+
 /**
  * @author Administrator
  * @date 2017/11/8
  */
-//@Entity(indices = {@Index(value = {"name_name"}, unique = true)})
+@Entity
 public class EatWhatModel {
-//    @PrimaryKey
-    public int id;
-//    @ColumnInfo(name = "name_name")
-    public String name;
-    public String value;
-//    @ColumnInfo(name = "path_name")
-    public String path;
+    @Id
+    public long id;
+    public String name = "";
+    public String value = "";
+    public String path = "";
 
     public EatWhatModel() {
     }

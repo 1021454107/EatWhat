@@ -11,7 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/myColorBg"
-        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -64,8 +63,7 @@
             android:padding="5dp"
             android:text="吃什么呢~~"
             android:textColor="@android:color/white"
-            android:textSize="18sp"
-            android:visibility="invisible" />
+            android:textSize="18sp" />
 
     </com.example.administrator.eatwhat.view.RectRelativeLayout>
 
@@ -79,10 +77,9 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/shape_btn_round"
         android:gravity="center"
-        android:text="STOP"
+        android:text="GO"
         android:textColor="@android:color/white"
         android:textSize="28sp"
-        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
