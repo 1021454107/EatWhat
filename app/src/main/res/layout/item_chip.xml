@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingRight="10dp"
+    android:paddingVertical="5dp">
+
+
+    <com.example.administrator.eatwhat.view.Chip
+        android:id="@+id/item_chip_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:mcv_backgroundColor="@color/customColor"
+        app:mcv_closable="true"
+        app:mcv_closeColor="@color/customCloseIconColor"
+        app:mcv_hasIcon="true"
+        app:mcv_iconTextBackgroundColor="@android:color/black" />
+
+</RelativeLayout>

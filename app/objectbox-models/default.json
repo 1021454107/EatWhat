@@ -5,7 +5,7 @@
   "entities": [
     {
       "id": "1:5998966452336025181",
-      "lastPropertyId": "4:6752776095866792542",
+      "lastPropertyId": "6:5934284619333274367",
       "name": "EatWhatModel",
       "properties": [
         {
@@ -13,16 +13,16 @@
           "name": "id"
         },
         {
-          "id": "2:1937039935124152997",
-          "name": "name"
-        },
-        {
           "id": "3:687173976167824568",
           "name": "value"
         },
         {
-          "id": "4:6752776095866792542",
-          "name": "path"
+          "id": "5:2789296024064328508",
+          "name": "title"
+        },
+        {
+          "id": "6:5934284619333274367",
+          "name": "img_url"
         }
       ],
       "relations": []
@@ -36,7 +36,10 @@
   "modelVersionParserMinimum": 4,
   "retiredEntityUids": [],
   "retiredIndexUids": [],
-  "retiredPropertyUids": [],
+  "retiredPropertyUids": [
+    1937039935124152997,
+    6752776095866792542
+  ],
   "retiredRelationUids": [],
   "version": 1
 }

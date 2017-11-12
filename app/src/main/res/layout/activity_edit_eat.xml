@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.eatwhat.activity.EditEatActivity">
+
+    <RelativeLayout
+        android:id="@+id/act_rl_add_head"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/myColorBg">
+
+        <TextView
+            android:id="@+id/act_tv_add_head_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="添加"
+            android:textColor="@android:color/white"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/act_img_add_head_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:padding="12dp"
+            android:src="@drawable/icon_edit_back" />
+
+        <ImageView
+            android:id="@+id/act_img_add_head_menu"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:padding="12dp"
+            android:src="@drawable/icon_head_confirm" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/act_edt_add_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/act_rl_add_head"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:hint="这里写蔡明" />
+
+    <View
+        android:id="@+id/act_view_add_title"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/act_edt_add_title"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="32dp"
+        android:background="@color/myColorBg" />
+
+
+    <ImageView
+        android:id="@+id/act_img_add_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/act_view_add_title"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="500dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_img_default" />
+
+
+</RelativeLayout>
