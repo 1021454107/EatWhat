@@ -204,7 +204,8 @@ public class AddEatActivity extends AppCompatActivity implements View.OnClickLis
                 @Override
                 public void onChipClick(View v) {
                     final QMUIDialog.EditTextDialogBuilder builder = new QMUIDialog.EditTextDialogBuilder(mContext);
-                    builder.setTitle("编辑标题")
+                    builder
+//                            .setTitle("编辑标题")
                             .setPlaceholder("编辑标题")
                             .addAction(R.drawable.icon_edit_cancel, "", new QMUIDialogAction.ActionListener() {
                                 @Override
@@ -235,15 +236,15 @@ public class AddEatActivity extends AppCompatActivity implements View.OnClickLis
                 @Override
                 public void onCloseClick(View v) {
                     new QMUIDialog.MessageDialogBuilder(mContext)
-                            .setTitle("删除")
+//                            .setTitle("删除")
                             .setMessage("确定要删除吗？")
-                            .addAction("取消", new QMUIDialogAction.ActionListener() {
+                            .addAction(R.drawable.icon_edit_cancel, "", new QMUIDialogAction.ActionListener() {
                                 @Override
                                 public void onClick(QMUIDialog dialog, int index) {
                                     dialog.dismiss();
                                 }
                             })
-                            .addAction(0, "删除", QMUIDialogAction.ACTION_PROP_NEGATIVE, new QMUIDialogAction.ActionListener() {
+                            .addAction(R.drawable.icon_edit_confirm, "", new QMUIDialogAction.ActionListener() {
                                 @Override
                                 public void onClick(QMUIDialog dialog, int index) {
                                     modelBox.remove(mList.get(i).id);

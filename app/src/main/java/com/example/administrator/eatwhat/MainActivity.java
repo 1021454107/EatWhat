@@ -25,6 +25,8 @@ import com.guoxiaoxing.phoenix.core.listener.OnPickerListener;
 import com.guoxiaoxing.phoenix.core.model.MediaEntity;
 import com.guoxiaoxing.phoenix.core.model.MimeType;
 import com.guoxiaoxing.phoenix.picker.Phoenix;
+import com.qmuiteam.qmui.widget.dialog.QMUIDialog;
+import com.qmuiteam.qmui.widget.dialog.QMUIDialogAction;
 
 import java.util.List;
 import java.util.Random;
@@ -202,7 +204,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.act_btn_go:
                 if (!isStart) {
                     if (count == 10) {
-                        ToastUtils.showLong("选10次了，还不知道吃什么就别吃了吧");
+                        new QMUIDialog.CustomDialogBuilder(mContext)
+                                .setLayout(R.layout.layout_dialog_chishibani)
+                                .addAction("好吧", new QMUIDialogAction.ActionListener() {
+                                    @Override
+                                    public void onClick(QMUIDialog dialog, int index) {
+                                        dialog.dismiss();
+                                    }
+                                })
+                                .addAction(0, "再来最后一次嘛", QMUIDialogAction.ACTION_PROP_NEGATIVE, new QMUIDialogAction.ActionListener() {
+                                    @Override
+                                    public void onClick(QMUIDialog dialog, int index) {
+                                        isStart = true;
+                                        count++;
+                                        btnGo.setImageResource(R.drawable.icon_txt_stop);
+                                        if (timer == null)
+                                            timer = new Timer();
+                                        if (timerTask == null) {
+                                            timerTask = new TimerTask() {
+                                                @Override
+                                                public void run() {
+                                                    mHanlder.sendEmptyMessage(1);//通知UI更新
+                                                }
+                                            };
+                                        }
+                                        timer.schedule(timerTask,
+                                                0,//延迟5秒执行
+                                                100);//周期为1秒
+                                    }
+                                }).show();
                     } else {
                         isStart = true;
                         count++;
@@ -251,4 +281,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             ex.printStackTrace();
         }
     }
+
 }

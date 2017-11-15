@@ -7,4 +7,6 @@
     <color name="myColorBg">#C9542C</color>
     <color name="customColor">#f0e8e1</color>
     <color name="customCloseIconColor">#c1afa0</color>
+    <color name="qmui_config_color_blue">#c1afa0</color>
+    <color name="qmui_config_color_red">#C9542C</color>
 </resources>
